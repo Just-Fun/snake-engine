@@ -6,14 +6,17 @@ import com.codenjoy.dojo.client.WebSocketRunner;
 import com.codenjoy.dojo.services.Dice;
 import com.codenjoy.dojo.services.Point;
 import com.codenjoy.dojo.services.RandomDice;
+import com.codenjoy.dojo.client.AbstractBoard;
+import com.codenjoy.dojo.snake.model.Elements;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class YourSolver implements Solver<Board> {
 
     private static final String USER_NAME = "serzhcello@ukr.net";
 
-//    private static final String USER_NAME = Email.email;
+    //    private static final String USER_NAME = Email.email;
     private Board board;
 
     @Override
@@ -91,12 +94,13 @@ public class YourSolver implements Solver<Board> {
         }
     }
 
-    private boolean dontInsideClosed(Point head, Direction direction) {
+    private boolean notInside(Point head, Direction direction) {
         int size = board.getSnake().size();
+        List<Point> empty = board.get(Elements.NONE);
+        List<Point> apple = board.getApples();
         for (int i = 0; i < size; i++) {
             // взять копию борда проходиться по пустым клеткам, заменяя их заполненными
             // и проверить, влезет ли змея
-
         }
         return false;
     }
