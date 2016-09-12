@@ -99,6 +99,7 @@ public class YourSolver implements Solver<Board> {
         List<Point> empty = board.get(Elements.NONE);
         List<Point> apple = board.getApples();
         for (int i = 0; i < size; i++) {
+            // TODO
             // взять копию борда проходиться по пустым клеткам, заменяя их заполненными
             // и проверить, влезет ли змея
         }
