@@ -14,9 +14,9 @@ import java.util.List;
 
 public class YourSolver implements Solver<Board> {
 
-    private static final String USER_NAME = "serzhcello@ukr.net";
+    private static Properties properties = new Properties();
+    private static final String USER_NAME = properties.getEmail();
 
-    //    private static final String USER_NAME = Email.email;
     private Board board;
 
     @Override
